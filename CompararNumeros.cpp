@@ -4,30 +4,44 @@ using namespace std;
 
 int main()
 {
-	int firstNumber;
-	int secondNumber;
-	cout << "Digite um número: ";
-	cin >> firstNumber;
-	cout << "Você digitou " << firstNumber << ". Digite outro númereo: ";
-	cin >> secondNumber;
+	int i;
+	int j;
+	bool keepgoing = true;
+	int answer;
+	for (int loop = 0; loop < 10; loop++)
+	{
+		cout << loop << " ";
+	}
+	while (keepgoing)
+	{
+		cout << "Enter a number: ";
+		cin >> i;
+		cout << "You entered " << i << ". Enter another number: ";
+		cin >> j;
 
-	if (firstNumber < secondNumber)
-	{
-		cout << "O primeiro número é , " << firstNumber << ", é menor que o segundo número , " << secondNumber << endl;
+		if (i<j)
+		{
+			cout << "The first number, " << i << ", is less than the second number, " << j << endl;
+		}
+		else
+		{
+			cout << "The first number, " << i << ", is not less than the second number, " << j << endl;
+		}
+		if (i == j)
+		{
+			cout << "The first number, " << i << ", is equal to the second number, " << j << endl;
+		}
+		if (i>j)
+		{
+			cout << "The first number, " << i << ", is greater than the second number, " << j << endl;
+		}
+		cout << "Compare another? 0 for no: ";
+		cin >> answer;
+		if (answer == 0)
+		{
+			keepgoing = false;
+		}
 	}
-	else
-	{
-		cout << "O primeiro número, " << firstNumber << ", não é menor que o segundo númeero, " << secondNumber << endl;
-	}
-	if (firstNumber == secondNumber)
-	{
-		cout << "O primeiro número, " << firstNumber << ", é igual ao segundo número, " << secondNumber << endl;
-	}
-	if (firstNumber > secondNumber)
-	{
-		cout << "O primeiro número, " << firstNumber << ", é maior que o segundo número, " << secondNumber << endl;
-	}
-
 	return 0;
 }
 
